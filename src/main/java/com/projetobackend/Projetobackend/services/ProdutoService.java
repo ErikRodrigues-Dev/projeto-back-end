@@ -1,27 +1,26 @@
-package com.projetobackend.Projetobackend.repository;
+package com.projetobackend.Projetobackend.services;
 
 import com.projetobackend.Projetobackend.model.Produto;
-import org.springframework.stereotype.Repository;
+import com.projetobackend.Projetobackend.repository.ProdutoRepostory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
-public class ProdutoRepostory {
+@Service
+public class ProdutoService {
 
-    //Simulando um banco de dados
-    private List<Produto> produtos = new ArrayList<Produto>();
-    private Integer ultimoId = 0;
+    @Autowired
+    private ProdutoRepostory produtoRepostory;
 
     /**
-     * Metodo para retornar uma lista de produtos
-     *
+     * Método para retornar uma lista de produtos
      * @return Lista de produtos.
      */
     public List<Produto> obterTodos(){
-        return produtos;
+        return produtoRepostory.obterTodos();
     }
 
     /**
@@ -30,10 +29,7 @@ public class ProdutoRepostory {
      * @return retorno um produto caso tenha encontrado
      */
     public Optional<Produto> obterPorId(Integer id){
-        return produtos
-                .stream()
-                .filter(produto -> produto.getId() == id)
-                .findFirst();
+        return produtoRepostory.obterPorId(id);
     }
 
     /**
@@ -42,10 +38,7 @@ public class ProdutoRepostory {
      * @return Retorna o produto que foi adicionado na lista.
      */
     public Produto adicionar(Produto produto){
-        ultimoId++;
-        produto.setId((ultimoId));
-        produtos.add(produto);
-        return produto;
+        return produtoRepostory.adicionar(produto);
     }
 
     /**
@@ -53,7 +46,7 @@ public class ProdutoRepostory {
      * @param id do produto que vai ser deletado.
      */
     public void deletar(Integer id){
-        produtos.removeIf(produto -> produto.getId() == id);
+       produtoRepostory.deletar(id);
     }
 
     /**
@@ -61,15 +54,10 @@ public class ProdutoRepostory {
      * @param produto que será atualizado
      * @return Retorna o produto apos atualizar a lista.
      */
-    public Produto atualizar(Produto produto){
-       Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
-
-       if (produtoEncontrado.isEmpty()){
-           throw new InputMismatchException("Produto não encontrado");
-       }
-       deletar(produto.getId());
-       produtos.add(produto);
-       return produto;
-
+    public Produto atualizar(Integer id, Produto produto){
+        produto.setId(id);
+        return produtoRepostory.atualizar(produto);
     }
+
+
 }

@@ -1,0 +1,16 @@
+Objetivo: Criar uma API REstFull para controle de produtos.
+
+Modelo:
+ - Produto : id, nome, quantidade, valor, observacao
+
+ Repositorio:
+    -Repositorio de Usuarios:
+        -Metodos: obterTodos, obtePorId, adicionar, atualizar, deletar
+
+ Serviço de produto:
+        -Metodos: obterTodos, obtePorId, adicionar, atualizar, deletar
+
+ Controller de produto(Classe principal para trabalhar com todos os métodos):
+        -Metodos: obterTodos, obtePorId, adicionar, atualizar, deletar
+
+
