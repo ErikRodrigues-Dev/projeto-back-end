@@ -42,7 +42,7 @@ public class ProdutoRepostory {
     public Produto adicionar(Produto produto){
         ultimoId++;
         produto.setId((ultimoId));
-        produto.add(produto);
+        produtos.add(produto);
         return produto;
     }
 
@@ -60,14 +60,14 @@ public class ProdutoRepostory {
      * @return Retorna o produto apos atualizar a lista.
      */
     public Produto atualizar(Produto produto){
-       Optional<Produto> produtoEncontrado = obterTodos(produto.getId());
+       Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
 
        if (produtoEncontrado.isEmpty()){
            throw new InputMismatchException("Produto não encontrado");
        }
        deletar(produto.getId());
 
-       produto.add(produto);
+       produtos.add(produto);
 
        return produto;
 
