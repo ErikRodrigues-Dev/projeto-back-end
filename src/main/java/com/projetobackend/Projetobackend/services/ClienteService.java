@@ -1,7 +1,7 @@
 package com.projetobackend.Projetobackend.services;
 
 
-import com.projetobackend.Projetobackend.model.Cliente;
+import com.projetobackend.Projetobackend.model.entities.Cliente;
 import com.projetobackend.Projetobackend.repository.ClienteRepostory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

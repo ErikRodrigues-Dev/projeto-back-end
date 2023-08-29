@@ -1,6 +1,7 @@
 package com.projetobackend.Projetobackend.repository;
 
-import com.projetobackend.Projetobackend.model.Produto;
+import com.projetobackend.Projetobackend.model.entities.Produto;
+import com.projetobackend.Projetobackend.model.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class ProdutoRepostory {
        Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
 
        if (produtoEncontrado.isEmpty()){
-           throw new InputMismatchException("Produto não encontrado");
+           throw new ResourceNotFoundException("Produto não encontrado");
        }
        deletar(produto.getId());
        produtos.add(produto);

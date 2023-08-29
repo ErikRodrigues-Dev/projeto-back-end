@@ -1,4 +1,4 @@
-package com.projetobackend.Projetobackend.model;
+package com.projetobackend.Projetobackend.model.entities;
 
 public class Produto {
 

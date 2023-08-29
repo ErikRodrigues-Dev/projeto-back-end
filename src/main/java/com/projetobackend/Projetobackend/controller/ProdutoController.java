@@ -1,6 +1,6 @@
 package com.projetobackend.Projetobackend.controller;
 
-import com.projetobackend.Projetobackend.model.Produto;
+import com.projetobackend.Projetobackend.model.entities.Produto;
 import com.projetobackend.Projetobackend.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

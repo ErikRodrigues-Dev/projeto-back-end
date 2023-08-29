@@ -1,6 +1,7 @@
 package com.projetobackend.Projetobackend.repository;
 
-import com.projetobackend.Projetobackend.model.Cliente;
+import com.projetobackend.Projetobackend.model.entities.Cliente;
+import com.projetobackend.Projetobackend.model.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class ClienteRepostory {
     public Cliente atualizar(Cliente cliente){
         Optional<Cliente> clienteEncontrado = obterPorId(cliente.getCodCliente());
         if (clienteEncontrado.isEmpty()){
-            throw new InputMismatchException("Cliente não encontrado!");
+            throw new ResourceNotFoundException("Cliente não encontrado!");
         }
         deletar(cliente.getCodCliente());
         clientes.add(cliente);

@@ -1,11 +1,10 @@
 package com.projetobackend.Projetobackend.services;
 
-import com.projetobackend.Projetobackend.model.Produto;
+import com.projetobackend.Projetobackend.model.entities.Produto;
 import com.projetobackend.Projetobackend.repository.ProdutoRepostory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 

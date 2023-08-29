@@ -1,4 +1,4 @@
-package com.projetobackend.Projetobackend.model;
+package com.projetobackend.Projetobackend.model.entities;
 
 public class Cliente {
 
@@ -6,7 +6,7 @@ public class Cliente {
 
     private Integer CodCliente;
     private String nome;
-    private Integer cpf;
+    private String cpf;
     private Integer idade;
     private String email;
 
@@ -26,11 +26,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Integer getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

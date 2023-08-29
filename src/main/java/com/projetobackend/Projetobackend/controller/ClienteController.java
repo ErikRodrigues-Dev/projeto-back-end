@@ -1,6 +1,6 @@
 package com.projetobackend.Projetobackend.controller;
 
-import com.projetobackend.Projetobackend.model.Cliente;
+import com.projetobackend.Projetobackend.model.entities.Cliente;
 import com.projetobackend.Projetobackend.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,10 +30,10 @@ public class ClienteController {
         return clienteService.obterPorId(id);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public String deletar(@PathVariable Integer id){
         clienteService.deletar(id);
-        return "Produto com id: "+id+"Foi deletado com sucesso!";
+        return "Produto com id: "+id+" Foi deletado com sucesso!";
     }
 
     @PutMapping("/{id}")
