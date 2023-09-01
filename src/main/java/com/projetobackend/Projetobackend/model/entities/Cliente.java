@@ -1,9 +1,17 @@
 package com.projetobackend.Projetobackend.model.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Cliente {
 
      /*- Produto : CodCliente, nome, CPF, idade, celular, email*/
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer CodCliente;
     private String nome;
     private String cpf;

@@ -2,7 +2,7 @@ package com.projetobackend.Projetobackend.services;
 
 
 import com.projetobackend.Projetobackend.model.entities.Cliente;
-import com.projetobackend.Projetobackend.repository.ClienteRepostory;
+import com.projetobackend.Projetobackend.repository.ClienteRepostory_old;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 public class ClienteService {
 
     @Autowired
-    private ClienteRepostory clienteRepostory;
+    private ClienteRepostory_old clienteRepostory;
 
     public List<Cliente>obterTodos(){return clienteRepostory.obterTodos();}
 

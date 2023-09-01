@@ -1,7 +1,7 @@
 package com.projetobackend.Projetobackend.services;
 
 import com.projetobackend.Projetobackend.model.entities.Produto;
-import com.projetobackend.Projetobackend.repository.ProdutoRepostory;
+import com.projetobackend.Projetobackend.repository.ProdutoRepostory_old;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.Optional;
 public class ProdutoService {
 
     @Autowired
-    private ProdutoRepostory produtoRepostory;
+    private ProdutoRepostory_old produtoRepostory;
 
     /**
      * Método para retornar uma lista de produtos

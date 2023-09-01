@@ -31,4 +31,11 @@ Modelo:
  Controller de produto(Classe principal para trabalhar com todos os métodos):
         -Metodos: obterTodos, obtePorId, adicionar, atualizar, deletar
 
+{------------------------------ Tratamento de Erro em Cliente e Produto ------------------------------------}
+Tratamento e modelagem de erro OK
+                               - Produto Ok
+                               - Cliente OK
+{------------------------------ Criar o banco de dados e fazer as conexões ---------------------------------}
+Criar o banco de dados Postegres:
+
 
