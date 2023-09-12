@@ -1,11 +1,10 @@
 package com.projetobackend.Projetobackend.model.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_cliente")
 public class Cliente {
 
      /*- Produto : CodCliente, nome, CPF, idade, celular, email*/

@@ -57,6 +57,4 @@ public class ProdutoService {
         produto.setId(id);
         return produtoRepostory.atualizar(produto);
     }
-
-
 }

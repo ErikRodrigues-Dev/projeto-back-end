@@ -1,15 +1,11 @@
 package com.projetobackend.Projetobackend.model.entities;
 
-import org.springframework.data.annotation.Id;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_productos")
 public class Produto {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
